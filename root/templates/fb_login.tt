@@ -1,0 +1,18 @@
+<script type="text/javascript" src="[% uri_for_ver('/static/js/fbAsync.js')%]"></script>
+<script type="text/javascript">
+	function logout() {
+		console.log('Start Log out');
+		FB.logout(function(response) {
+			console.log('Logging out');
+		    logout(response);
+		    window.location.href = "/fb_logout";
+		});
+		return false;
+	}
+</script>
+
+<a href="[% fb_url %]">
+	<img src="[% pic_url %]">
+</a>
+<p>You are logged in as [% fb_name %]<p>
+<a href="/fb_logout" onclick="logout()">Logout</a>
