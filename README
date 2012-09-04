@@ -1,1 +1,4 @@
 Run script/facebook_auth_server.pl to test the application.
+
+This is just a simple facebook integrated app.
+That will get the data from the user facebook account.
